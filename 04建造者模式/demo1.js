@@ -17,7 +17,7 @@ var Named = function (name) {
   var self = this;
   (function (name, self) {
     self.wholeName = name;
-    if(name.indexOf(' ') > -1) {
+    if (name.indexOf(' ') > -1) {
       self.FirstName = name.slice(0, name.indexOf(' '));
       self.secondName = name.slice(name.indexOf(' '));
     }
@@ -42,7 +42,6 @@ var Work = function (work) {
         self.work = '教师';
         self.workDes = '分享也是一种快乐';
         break;
-    
       default:
         self.work = work;
         self.workDes = 'sorry';
@@ -58,7 +57,7 @@ Work.prototype.changeDes = function (setence) {
 }
 
 // 创建应聘者
-var Person = function(name, work) {
+var Person = function (name, work) {
   // 创建应聘者缓存对象
   var _person = new Human();
   _person.name = new Named(name);
